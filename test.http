@@ -1,0 +1,73 @@
+@url=http://localhost:3001/api
+
+@json=Content-Type: application/json
+###
+get {{url}}
+
+###
+post {{url}}/regist
+{{json}}
+
+{
+    "username":"user222",
+    "password":"123",
+    "email":"18875854140@163.com"
+}
+
+###
+get {{url}}/users
+
+
+###
+post {{url}}/login
+{{json}}
+
+{
+    "username":"user3",
+    "password":"123"
+}
+
+###
+get {{url}}/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNWQ5YjRjNzViYTk4MGQ5MzcwODI4OCIsImlhdCI6MTYzMzUyODM1OX0.gnMFD9l_mhqO7wjs1tq5rBlLKYPhtjxvg9qdKD5N3V4
+
+###
+get {{url}}/SceneryInfo/provin
+{{json}}
+
+{
+    "provin":"云南"
+}
+
+###
+post {{url}}/SceneryInfo/scenery
+{{json}}
+
+{
+    "scenery":"南三岛Nansan Island"
+}
+
+###
+get {{url}}/main
+
+###
+post {{url}}/search
+{{json}}
+
+{
+    "key":"云南"
+}
+
+###
+post {{url}}/newlog
+{{json}}
+
+{
+    "title":"title",
+    "content":"content",
+    "date":"date",
+    "position":"position"
+}
+
+###
+get "https://v0.yiketianqi.com/api?unescape=1&version=v9&appid=88438678&appsecret=DSzi6tJF"
